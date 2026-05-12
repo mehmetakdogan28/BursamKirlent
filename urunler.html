@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kırlent Modelleri | Bursam Kırlent</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: 'Lato', sans-serif; background-color: #f4f4f4; }
+        /* Wraith Stili Kart Yapısı */
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .product-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="w-full bg-white border-b border-gray-200 py-4 px-6 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-[#10402e]">BURSAM <span class="text-[#c5a059]">KIRLENT</span></a>
+            <div class="space-x-6 text-sm font-bold uppercase tracking-wider">
+                <a href="index.html" class="hover:text-green-800">Geri Dön</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto py-12 px-6">
+        <h1 class="text-3xl font-bold mb-8 text-gray-800">Tüm Kırlent Koleksiyonu</h1>
+        
+        <!-- Wraith Tarzı 4'lü Vitrin (Mobilde 2'li, Geniş Ekran 4'lü) -->
+        <div id="maza-container" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- JS ile dolacak -->
+        </div>
+    </div>
+
+    <script>
+        const container = document.getElementById('maza-container');
+        for(let i=1; i<=74; i++) {
+            container.innerHTML += `
+                <div class="product-card p-4 border border-gray-100">
+                    <div class="aspect-square overflow-hidden mb-4 rounded-md bg-gray-50">
+                        <img src="img/model_${i}.jpg" alt="Model BK-${i}" class="w-full h-full object-cover">
+                    </div>
+                    <div class="text-left">
+                        <p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Model BK-${i}</p>
+                        <h3 class="text-sm font-bold text-gray-700 mt-1 uppercase">3D Örgü Kırlent #${i}</h3>
+                        <p class="text-xs text-gray-500 mt-1">43x43 cm • Kadife</p>
+                        <a href="https://wa.me/905051113552?text=Merhaba, BK-${i} modelini sipariş vermek istiyorum." 
+                           class="mt-4 block text-center py-2 border border-[#10402e] text-[#10402e] font-bold text-xs rounded hover:bg-[#10402e] hover:text-white transition">
+                           SİPARİŞ VER
+                        </a>
+                    </div>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
