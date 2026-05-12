@@ -3,99 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bursam Kırlent | Ana Sayfa</title>
+    <title>Bursam Kırlent | Evinize Şıklık Katın</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body { font-family: 'Lato', sans-serif; scroll-behavior: smooth; background-color: white; }
+        body { font-family: 'Lato', sans-serif; scroll-behavior: smooth; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
-        
-        /* Renk burada daha koyu bir krem/bej tonuna çekildi */
-        .bg-custom-cream { background-color: #F5F1E8; } 
-        
+        .bg-custom-cream { background-color: #F5F1E8; }
         .text-bursa-green { color: #10402e; }
         .bg-bursa-green { background-color: #10402e; }
+        .hero-gradient { background: linear-gradient(rgba(16, 64, 46, 0.8), rgba(16, 64, 46, 0.8)), url('https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?q=80&w=1974&auto=format&fit=crop'); background-size: cover; background-position: center; }
     </style>
 </head>
-<body>
+<body class="bg-white text-gray-900">
 
+    <!-- Navigasyon -->
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-bursa-green tracking-tight uppercase">BURSAM <span class="text-[#c5a059]">KIRLENT</span></a>
-            <div class="hidden md:flex space-x-8 font-medium">
-                <a href="index.html" class="hover:text-bursa-green transition text-bursa-green font-bold">Ana Sayfa</a>
-                <a href="#ozellikler" class="hover:text-bursa-green transition">Özellikler</a>
-                <a href="urunler.html" class="hover:text-bursa-green transition">Ürünler</a>
+            <div class="flex items-center gap-4">
+                <img src="logo.png" alt="Bursam Kırlent Logo" class="h-12">
+                <a href="index.html" class="text-2xl font-bold text-bursa-green tracking-tight uppercase hidden md:block">BURSAM <span class="text-[#c5a059]">KIRLENT</span></a>
             </div>
-            <a href="https://wa.me/905051113552" class="bg-green-600 text-white px-5 py-2 rounded-full text-sm font-bold flex items-center gap-2 hover:bg-green-700 transition">
-                <i class="fab fa-whatsapp"></i> Sipariş Hattı
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#home" class="hover:text-bursa-green transition">Ana Sayfa</a>
+                <a href="urunler.html" class="hover:text-bursa-green transition">Ürünler</a>
+                <a href="#ozellikler" class="hover:text-bursa-green transition">Özellikler</a>
+            </div>
+            <a href="https://wa.me/905051113552" class="bg-green-600 text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-green-700 transition flex items-center gap-2">
+                <i class="fab fa-whatsapp text-lg"></i> Sipariş Ver
             </a>
         </div>
     </nav>
 
-    <!-- Zarafet ve Konfor Bölümü (Koyu Krem Yapıldı) -->
-    <header id="home" class="min-h-screen flex items-center pt-20 px-6 bg-custom-cream">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-8">
-                <h1 class="text-6xl md:text-7xl leading-tight text-gray-900">Zarafet ve Konforun <br><span class="text-bursa-green italic text-5xl md:text-6xl">Bursa'daki Adresi.</span></h1>
-                <p class="text-xl text-gray-600 leading-relaxed max-w-lg">
-                    3D kabartma nakış teknolojisi ve Bursa'nın eşsiz kumaş kalitesiyle koleksiyonlarımızı keşfedin.
-                </p>
-                <a href="urunler.html" class="bg-bursa-green text-white w-fit px-8 py-4 rounded-xl text-lg font-bold shadow-lg transition-transform active:scale-95 flex items-center justify-center gap-2">
-                    Kırlent Ürünleri <i class="fas fa-arrow-right text-sm"></i>
-                </a>
-            </div>
-            <div class="relative">
-                <img src="img/logo.png" alt="Bursam Kırlent Logosu" class="relative z-10 w-full max-w-lg h-auto object-contain drop-shadow-2xl">
-            </div>
-        </div>
-    </header>
-
-    <!-- Ürün Özellikleri (Kutucuklar Header ile Aynı Koyu Krem Oldu) -->
-    <section id="ozellikler" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl mb-4 text-bursa-green">Ürün Özellikleri</h2>
-                <div class="w-20 h-1 bg-bursa-green mx-auto mb-6"></div>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-12 rounded-[2rem] bg-custom-cream space-y-4 text-center shadow-sm border border-gray-100">
-                    <i class="fas fa-layer-group text-4xl text-bursa-green"></i>
-                    <h3 class="text-2xl text-gray-800">Premium Kadife</h3>
-                    <p class="text-gray-600">Yumuşak dokulu örgü görünümlü premium kadife kumaş.</p>
-                </div>
-                <div class="p-12 rounded-[2rem] bg-custom-cream space-y-4 text-center shadow-sm border border-gray-100">
-                    <i class="fas fa-cube text-4xl text-bursa-green"></i>
-                    <h3 class="text-2xl text-gray-800">3D Tasarım</h3>
-                    <p class="text-gray-600">Dijital baskı ile hayat bulan 3D kabartmalı desenler.</p>
-                </div>
-                <div class="p-12 rounded-[2rem] bg-custom-cream space-y-4 text-center shadow-sm border border-gray-100">
-                    <i class="fas fa-compress-alt text-4xl text-bursa-green"></i>
-                    <h3 class="text-2xl text-gray-800">Gizli Fermuar</h3>
-                    <p class="text-gray-600">Gizli fermuar tasarımıyla estetik bütünlük.</p>
-                </div>
+    <!-- Hero Bölümü -->
+    <section id="home" class="hero-gradient h-screen flex items-center justify-center text-center text-white px-6">
+        <div class="max-w-3xl">
+            <span class="text-[#c5a059] uppercase tracking-[0.3em] font-bold text-sm mb-4 block">Bursa Osmangazi'den Evinize</span>
+            <h1 class="text-5xl md:text-7xl mb-6">Zarafet ve Konforun Buluştuğu Nokta</h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-10 font-light leading-relaxed">
+                5D Örgü desenli dijital baskılı kadife kırlent kılıfları ile yaşam alanlarınıza modern bir dokunuş katın.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="urunler.html" class="bg-[#c5a059] text-white px-10 py-4 rounded-full font-bold hover:bg-[#b38f4d] transition-all transform hover:scale-105">Koleksiyonu İncele</a>
+                <a href="https://wa.me/905051113552" class="bg-white text-bursa-green px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-all border border-white">Hızlı Bilgi Al</a>
             </div>
         </div>
     </section>
 
-    <!-- Footer (E-posta ve İletişim Bilgileri) -->
-    <footer class="py-16 bg-[#0a1118] text-gray-400 px-6 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 items-center">
-            <div>
-                <h3 class="text-white text-xl font-bold uppercase tracking-widest">BURSAM <span class="text-[#c5a059]">KIRLENT</span></h3>
-                <p class="mt-2 text-sm">Bursa Osmangazi'den tüm Türkiye'ye şıklık taşıyoruz.</p>
+    <!-- Özellikler Bölümü -->
+    <section id="ozellikler" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-[#c5a059] font-bold uppercase tracking-widest text-sm">Üstün Kalite</span>
+                <h2 class="text-4xl md:text-5xl mt-2 text-bursa-green">Ürün Özellikleri</h2>
+                <div class="w-20 h-1 bg-bursa-green mx-auto mt-6"></div>
             </div>
-            <div class="space-y-3">
-                <h4 class="text-white font-bold uppercase text-xs tracking-widest mb-4">İletişim Bilgileri</h4>
-                <p class="flex items-center gap-3 text-sm"><i class="fab fa-whatsapp text-green-500 text-lg"></i> +90 505 111 35 52</p>
-                <p class="flex items-center gap-3 text-sm"><i class="fas fa-envelope text-[#c5a059]"></i> mehmetakdogan152533@gmail.com</p>
-                <p class="flex items-center gap-3 text-sm"><i class="fas fa-map-marker-alt text-red-500"></i> Bursa / Osmangazi</p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Özellik 1: 5D Baskı -->
+                <div class="p-10 rounded-[2.5rem] bg-custom-cream border border-gray-100 hover:shadow-xl transition-all duration-500 group text-center">
+                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-sm group-hover:bg-bursa-green transition-colors duration-500">
+                        <i class="fas fa-layer-group text-2xl text-bursa-green group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-2xl text-gray-800 mb-4">5D Dijital Baskı</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        Yumuşak dokulu kadife kumaş üzerine uygulanan 5D kabartmalı örgü deseni ile hem estetik hem dokunsal zenginlik sunar.
+                    </p>
+                </div>
+
+                <!-- Özellik 2: Leke Tutmaz -->
+                <div class="p-10 rounded-[2.5rem] bg-custom-cream border border-gray-100 hover:shadow-xl transition-all duration-500 group text-center">
+                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-sm group-hover:bg-bursa-green transition-colors duration-500">
+                        <i class="fas fa-magic text-2xl text-bursa-green group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-2xl text-gray-800 mb-4">Leke Tutmaz Yapı</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        Premium kadife kumaş teknolojisi sayesinde leke tutmaz, uzun ömürlü kullanım sunar ve 30°C'de kolayca yıkanabilir.
+                    </p>
+                </div>
+
+                <!-- Özellik 3: Tasarım -->
+                <div class="p-10 rounded-[2.5rem] bg-custom-cream border border-gray-100 hover:shadow-xl transition-all duration-500 group text-center">
+                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-sm group-hover:bg-bursa-green transition-colors duration-500">
+                        <i class="fas fa-compress-alt text-2xl text-bursa-green group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-2xl text-gray-800 mb-4">Zarif Detaylar</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        43x43 cm ideal ölçü, gizli fermuar tasarımı ve kolay kombinlenebilir düz beyaz arka yüz ile estetik bütünlük sağlar.
+                    </p>
+                </div>
             </div>
-            <div class="md:text-right text-xs">
-                <p>© 2026 BURSAM KIRLENT - Tüm Hakları Saklıdır.</p>
+            
+            <!-- Alt Not -->
+            <div class="mt-16 p-6 bg-gray-50 rounded-2xl border-l-4 border-bursa-green max-w-3xl mx-auto text-center">
+                <p class="text-xs text-gray-500 italic">
+                    * Ürünlerimiz kılıf olarak satılmaktadır (iç yastık dahil değildir). 30°C'de sıkma yapmadan yıkanması tavsiye edilir.
+                </p>
             </div>
         </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-[#0a1118] text-gray-400 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 text-center md:text-left">
+            <div>
+                <h3 class="text-white text-xl font-bold uppercase tracking-widest mb-6">BURSAM <span class="text-[#c5a059]">KIRLENT</span></h3>
+                <p class="text-sm leading-relaxed">
+                    Bursa'nın köklü tekstil geleneğini modern tasarımlarla birleştirerek evlerinize taşıyoruz.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase text-sm tracking-widest">İletişim</h4>
+                <p class="text-sm mb-2"><i class="fas fa-map-marker-alt mr-2 text-[#c5a059]"></i> Osmangazi, Bursa / Türkiye</p>
+                <p class="text-sm mb-2"><i class="fas fa-phone mr-2 text-[#c5a059]"></i> +90 505 111 35 52</p>
+                <p class="text-sm"><i class="fas fa-user mr-2 text-[#c5a059]"></i> Mehmet Akdoğan</p>
+            </div>
+            <div class="flex flex-col items-center md:items-end">
+                <h4 class="text-white font-bold mb-6 uppercase text-sm tracking-widest">Sosyal Medya</h4>
+                <div class="flex gap-4 text-2xl">
+                    <a href="#" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/905051113552" class="hover:text-green-500 transition"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-gray-800 mt-12 pt-8 text-center">
+            <p class="text-xs">© 2026 Bursam Kırlent. Tüm Hakları Saklıdır.</p>
+        </div>
     </footer>
+
 </body>
 </html>
