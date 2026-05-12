@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bursam Kırlent | Dijital Katalog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; background-color: #fdfbf7; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .bursa-green { color: #1a4d2e; }
+        .bg-bursa-green { background-color: #1a4d2e; }
+        .product-card img { transition: transform 0.5s ease; }
+        .product-card:hover img { transform: scale(1.1); }
+    </style>
+</head>
+<body class="text-gray-900">
+
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-widest bursa-green uppercase">
+                BURSAM <span class="text-[#c5a059]">KIRLENT</span>
+            </div>
+            <a href="https://wa.me/905XXXXXXXXXX" class="bg-green-600 text-white px-6 py-2 rounded-full text-sm font-bold flex items-center gap-2 hover:bg-green-700 transition shadow-lg">
+                <i class="fab fa-whatsapp"></i> <span class="hidden md:inline">WhatsApp Katalog</span>
+            </a>
+        </div>
+    </nav>
+
+    <header class="py-20 px-6 text-center bg-[#f4f1ea] border-b border-gray-100">
+        <h1 class="text-5xl md:text-7xl mb-6 bursa-green">Zarafet İlmek İlmek İşlendi</h1>
+        <p class="text-gray-600 max-w-2xl mx-auto text-lg md:text-xl font-light italic">
+            Bursa'nın meşhur kumaş kalitesini ve 3D nakış sanatını evlerinize taşıyoruz. 74 farklı modelimizle tanışın.
+        </p>
+    </header>
+
+    <section class="py-12 px-6 max-w-7xl mx-auto">
+        <div class="flex items-center justify-between border-b-2 border-[#c5a059] pb-4 mb-10">
+            <h2 class="text-3xl bursa-green uppercase tracking-wider">2026 Koleksiyonu</h2>
+            <span class="text-gray-400 text-sm">Toplam: 74 Ürün</span>
+        </div>
+
+        <div id="product-gallery" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <!-- Ürünler JavaScript ile yüklenecek -->
+        </div>
+    </section>
+
+    <footer class="bg-[#1a4d2e] text-[#f4f1ea] py-12 px-6 text-center text-xs uppercase tracking-widest">
+        <p>© 2026 Bursam Kırlent - Bursa'nın El Emeği</p>
+    </footer>
+
+    <script>
+        const gallery = document.getElementById('product-gallery');
+        const totalItems = 74; 
+        const dayiWhatsApp = "905XXXXXXXXXX"; 
+
+        for (let i = 1; i <= totalItems; i++) {
+            gallery.innerHTML += `
+                <div class="product-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-50 flex flex-col">
+                    <div class="relative h-72 overflow-hidden bg-gray-100">
+                        <img src="img/${i}.jpg" alt="Model BK-${i}" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/600x600?text=Model+BK-${i}'">
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-1 rounded-full text-[10px] font-bold bursa-green shadow-sm">
+                            KOD: BK-${i}
+                        </div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between text-center">
+                        <h3 class="text-lg font-semibold bursa-green mb-4 uppercase tracking-tight">Kırlent Model ${i}</h3>
+                        <a href="https://wa.me/${dayiWhatsApp}?text=Merhaba, BK-${i} numaralı modeliniz için fiyat bilgisi alabilir miyim?" 
+                           class="inline-flex items-center justify-center gap-3 w-full bg-white border-2 border-[#1a4d2e] text-[#1a4d2e] py-3 rounded-2xl font-bold hover:bg-[#1a4d2e] hover:text-white transition-all transform active:scale-95 shadow-sm">
+                            <i class="fab fa-whatsapp text-xl"></i> FİYAT SOR
+                        </a>
+                    </div>
+                </div>`;
+        }
+    </script>
+</body>
+</html>
