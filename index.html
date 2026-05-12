@@ -8,22 +8,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body { font-family: 'Lato', sans-serif; scroll-behavior: smooth; }
+        body { font-family: 'Lato', sans-serif; scroll-behavior: smooth; background-color: white; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
-        .bg-cream { background-color: #FDFBF7; }
+        /* Senin istediğin o özel krem rengi */
+        .bg-custom-cream { background-color: #FDFBF7; } 
         .text-bursa-green { color: #10402e; }
         .bg-bursa-green { background-color: #10402e; }
     </style>
 </head>
-<body class="bg-cream text-gray-800">
+<body>
 
     <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-green-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- Tıklayınca Ana Sayfaya Atar -->
             <a href="index.html" class="text-2xl font-bold text-bursa-green tracking-tight uppercase">BURSAM <span class="text-[#c5a059]">KIRLENT</span></a>
             <div class="hidden md:flex space-x-8 font-medium">
                 <a href="index.html" class="hover:text-bursa-green transition">Ana Sayfa</a>
-                <a href="#hikayemiz" class="hover:text-bursa-green transition">Özellikler</a>
+                <a href="#ozellikler" class="hover:text-bursa-green transition">Özellikler</a>
                 <a href="urunler.html" class="hover:text-bursa-green transition">Ürünler</a>
             </div>
             <a href="https://wa.me/905051113552" class="bg-green-600 text-white px-5 py-2 rounded-full text-sm font-bold flex items-center gap-2 hover:bg-green-700 transition">
@@ -32,19 +32,17 @@
         </div>
     </nav>
 
-    <header id="home" class="min-h-screen flex items-center pt-20 px-6">
+    <!-- Zarafet ve Konfor Bölümü (Arka Plan Rengi Uyumlu Yapıldı) -->
+    <header id="home" class="min-h-screen flex items-center pt-20 px-6 bg-custom-cream">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div class="space-y-8">
-                <h1 class="text-6xl md:text-7xl leading-tight">Zarafet ve Konforun <br><span class="text-bursa-green italic text-5xl md:text-6xl">Bursa'daki Adresi.</span></h1>
+                <h1 class="text-6xl md:text-7xl leading-tight text-gray-900">Zarafet ve Konforun <br><span class="text-bursa-green italic text-5xl md:text-6xl">Bursa'daki Adresi.</span></h1>
                 <p class="text-xl text-gray-600 leading-relaxed max-w-lg">
                     3D kabartma nakış teknolojisi ve Bursa'nın eşsiz kumaş kalitesiyle koleksiyonlarımızı keşfedin.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <!-- Buton İsmi Değişti ve Ürünler Sayfasına Yönlendirildi -->
-                    <a href="urunler.html" class="bg-bursa-green text-white px-8 py-4 rounded-xl text-lg font-bold shadow-lg transition-transform active:scale-95 flex items-center justify-center gap-2">
-                        Kırlent Ürünleri <i class="fas fa-arrow-right text-sm"></i>
-                    </a>
-                </div>
+                <a href="urunler.html" class="bg-bursa-green text-white w-fit px-8 py-4 rounded-xl text-lg font-bold shadow-lg transition-transform active:scale-95 flex items-center justify-center gap-2">
+                    Kırlent Ürünleri <i class="fas fa-arrow-right text-sm"></i>
+                </a>
             </div>
             <div class="relative">
                 <img src="img/logo.png" alt="Bursam Kırlent Logosu" class="relative z-10 w-full max-w-lg h-auto object-contain drop-shadow-2xl">
@@ -52,46 +50,48 @@
         </div>
     </header>
 
-    <section id="hikayemiz" class="py-24 bg-white">
-        <!-- Mevcut Özellikler Kısmı Aynı Kaldı -->
+    <!-- Ürün Özellikleri (Kutucuklar Arka Planla Uyumlu Yapıldı) -->
+    <section id="ozellikler" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl mb-4 text-bursa-green">Ürün Özellikleri</h2>
                 <div class="w-20 h-1 bg-bursa-green mx-auto mb-6"></div>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-8 rounded-2xl bg-cream border border-green-50 space-y-4 shadow-sm text-center">
+                <!-- Kutucuk Arka Planı bg-custom-cream yapıldı -->
+                <div class="p-10 rounded-3xl bg-custom-cream space-y-4 text-center transition-hover hover:shadow-md">
                     <i class="fas fa-layer-group text-4xl text-bursa-green"></i>
-                    <h3 class="text-2xl">Premium Kadife</h3>
-                    <p class="text-gray-600">Yumuşak dokulu örgü görünümlü premium kadife kumaş.</p>
+                    <h3 class="text-2xl text-gray-800">Premium Kadife</h3>
+                    <p class="text-gray-600 italic">Yumuşak dokulu örgü görünümlü premium kadife kumaş.</p>
                 </div>
-                <div class="p-8 rounded-2xl bg-cream border border-green-50 space-y-4 shadow-sm text-center">
+                <div class="p-10 rounded-3xl bg-custom-cream space-y-4 text-center transition-hover hover:shadow-md">
                     <i class="fas fa-cube text-4xl text-bursa-green"></i>
-                    <h3 class="text-2xl">3D Tasarım</h3>
-                    <p class="text-gray-600">Dijital baskı ile hayat bulan 3D kabartmalı desenler.</p>
+                    <h3 class="text-2xl text-gray-800">3D Tasarım</h3>
+                    <p class="text-gray-600 italic">Dijital baskı ile hayat bulan 3D kabartmalı desenler.</p>
                 </div>
-                <div class="p-8 rounded-2xl bg-cream border border-green-50 space-y-4 shadow-sm text-center">
+                <div class="p-10 rounded-3xl bg-custom-cream space-y-4 text-center transition-hover hover:shadow-md">
                     <i class="fas fa-compress-alt text-4xl text-bursa-green"></i>
-                    <h3 class="text-2xl">Gizli Fermuar</h3>
-                    <p class="text-gray-600">Gizli fermuar tasarımıyla estetik bütünlük.</p>
+                    <h3 class="text-2xl text-gray-800">Gizli Fermuar</h3>
+                    <p class="text-gray-600 italic">Gizli fermuar tasarımıyla estetik bütünlük.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer Kısmı (İletişim Bilgileri Aynı Kalsın Dedin) -->
-    <footer class="py-20 bg-gray-900 text-gray-300 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
+    <!-- Footer (E-posta Eklendi ve Koyu Renk Yapıldı) -->
+    <footer class="py-16 bg-[#0a1118] text-gray-400 px-6 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 items-center">
             <div>
-                <h3 class="text-white text-2xl font-bold uppercase">BURSAM <span class="text-[#c5a059]">KIRLENT</span></h3>
-                <p class="mt-4">Bursa Osmangazi'den tüm Türkiye'ye şıklık taşıyoruz.</p>
+                <h3 class="text-white text-xl font-bold uppercase tracking-widest">BURSAM <span class="text-[#c5a059]">KIRLENT</span></h3>
+                <p class="mt-2 text-sm">Bursa Osmangazi'den tüm Türkiye'ye şıklık taşıyoruz.</p>
             </div>
-            <div>
-                <h4 class="text-white text-xl font-semibold mb-4">İletişim</h4>
-                <p><i class="fab fa-whatsapp text-green-500 mr-2"></i> +90 505 111 35 52</p>
-                <p class="mt-2"><i class="fas fa-map-marker-alt text-[#c5a059] mr-2"></i> Bursa / Osmangazi</p>
+            <div class="space-y-3">
+                <h4 class="text-white font-bold uppercase text-xs tracking-widest mb-4">İletişim Bilgileri</h4>
+                <p class="flex items-center gap-3 text-sm hover:text-white transition"><i class="fab fa-whatsapp text-green-500 text-lg"></i> +90 505 111 35 52</p>
+                <p class="flex items-center gap-3 text-sm hover:text-white transition"><i class="fas fa-envelope text-[#c5a059]"></i> mehmetakdogan152533@gmail.com</p>
+                <p class="flex items-center gap-3 text-sm hover:text-white transition"><i class="fas fa-map-marker-alt text-red-500"></i> Bursa / Osmangazi</p>
             </div>
-            <div class="text-center md:text-right">
+            <div class="md:text-right text-xs">
                 <p>© 2026 BURSAM KIRLENT - Tüm Hakları Saklıdır.</p>
             </div>
         </div>
