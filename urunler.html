@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ürünlerimiz | Bursam Kırlent</title>
+    <title>5D Baskılı Kırlentler | Bursam Kırlent</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,24 +23,64 @@
 </head>
 <body class="bg-gray-50">
 
-    <!-- Navigasyon -->
+    <!-- Profesyonel Mega Menülü Navigasyon -->
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative">
+            
             <!-- MOBİL MENÜ BUTONU -->
             <button id="menu-btn" class="md:hidden text-bursa-green text-2xl p-2">
                 <i class="fas fa-bars"></i>
             </button>
             
-            <!-- LOGO VE İSİM -->
+            <!-- LOGO VE İSİM (Tıklanınca Ana Sayfaya Gider) -->
             <div class="flex items-center gap-3 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">
                 <img src="img/logo.png" alt="Logo" class="h-10">
                 <a href="index.html" class="text-xl md:text-2xl font-bold text-bursa-green tracking-tight uppercase">BURSAM <span class="text-[#c5a059]">KIRLENT</span></a>
             </div>
 
-            <!-- MASAÜSTÜ MENÜ -->
-            <div class="hidden md:flex space-x-8 font-bold text-sm uppercase tracking-widest">
-                <a href="index.html" class="hover:text-bursa-green transition">Ana Sayfa</a>
-                <a href="urunler.html" class="text-bursa-green border-b-2 border-[#c5a059]">Ürünler</a>
+            <!-- MASAÜSTÜ MENÜ (Merkez Alan) -->
+            <div class="hidden md:flex items-center space-x-8 font-bold text-sm uppercase tracking-widest">
+                
+                <!-- MEGA MENU TETİKLEYİCİ GRUP -->
+                <div class="relative group py-2">
+                    <button class="text-bursa-green flex items-center gap-1 hover:text-[#c5a059] transition py-2 text-sm font-bold uppercase tracking-widest">
+                        Kategoriler <i class="fas fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    
+                    <!-- WRAITH TARZI PREMIUM MEGA MENU PANELİ -->
+                    <div class="absolute left-1/2 -translate-x-1/2 top-full w-[550px] bg-white shadow-2xl rounded-[2rem] p-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100 mt-2 grid grid-cols-2 gap-6 z-50">
+                        
+                        <!-- 5D Kırlent Sayfası Linki (Aktif) -->
+                        <a href="urunler.html" class="group/item block p-4 rounded-2xl bg-krem border border-[#c5a059] transition text-left">
+                            <div class="aspect-[4/3] bg-[#10402e]/5 rounded-xl mb-3 flex items-center justify-center text-bursa-green relative overflow-hidden">
+                                <i class="fas fa-layer-group text-3xl group-hover/item:scale-110 transition-transform duration-500"></i>
+                                <div class="absolute top-2 right-2 bg-bursa-green text-white text-[8px] font-bold px-2 py-0.5 rounded-full uppercase">Aktif</div>
+                            </div>
+                            <span class="block text-bursa-green font-bold text-base mb-1 normal-case tracking-normal">5D Baskılı Kırlentler</span>
+                            <span class="block text-gray-400 text-[11px] lowercase font-normal tracking-normal">Premium 5D dijital baskı teknolojisi</span>
+                        </a>
+                        
+                        <!-- Punch Kırlent Sayfası Linki -->
+                        <a href="punch.html" class="group/item block p-4 rounded-2xl bg-gray-50 border border-transparent hover:border-[#c5a059] hover:bg-krem transition text-left">
+                            <div class="aspect-[4/3] bg-gray-100 rounded-xl mb-3 flex items-center justify-center text-gray-400 group-hover/item:text-[#c5a059] transition-colors relative overflow-hidden">
+                                <i class="fas fa-scissors text-3xl group-hover/item:scale-110 transition-transform duration-500"></i>
+                                <div class="absolute top-2 right-2 bg-[#c5a059] text-white text-[8px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider animate-pulse">Yeni</div>
+                            </div>
+                            <span class="block text-gray-800 group-hover/item:text-bursa-green font-bold text-base mb-1 normal-case tracking-normal">Punch Kırlentler</span>
+                            <span class="block text-gray-400 text-[11px] lowercase font-normal tracking-normal">Özel el emeği punch işleme modelleri</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <a href="kurumsal.html" class="hover:text-[#c5a059] transition text-gray-700">Kurumsal</a>
+                <a href="iletisim.html" class="hover:text-[#c5a059] transition text-gray-700">İletişim</a>
+            </div>
+            
+            <!-- SAĞ TARAF: WHATSAPP AKSİYON BUTONU -->
+            <div class="hidden md:block">
+                <a href="https://wa.me/905051113552" target="_blank" class="bg-bursa-green text-white text-[11px] font-bold px-6 py-3 rounded-full hover:bg-[#c5a059] transition-colors uppercase tracking-widest shadow-md flex items-center gap-2">
+                    <i class="fab fa-whatsapp text-sm text-green-400"></i> Hızlı Sipariş
+                </a>
             </div>
             
             <div class="w-10 md:hidden"></div>
@@ -52,8 +92,14 @@
         <button id="close-btn" class="absolute top-6 right-6 text-3xl"><i class="fas fa-times"></i></button>
         <nav class="flex flex-col space-y-8 mt-10 text-2xl font-bold uppercase">
             <a href="index.html">Ana Sayfa</a>
-            <a href="urunler.html">Ürünler</a>
-            <a href="https://wa.me/905051113552" class="text-green-400 text-lg uppercase"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <hr class="opacity-10">
+            <span class="text-xs text-[#c5a059] tracking-widest">Kategoriler</span>
+            <a href="urunler.html" class="text-xl pl-4 text-green-300">— 5D Baskılı Kırlent</a>
+            <a href="punch.html" class="text-xl pl-4">— Punch Kırlent</a>
+            <hr class="opacity-10">
+            <a href="kurumsal.html" class="text-xl">Kurumsal</a>
+            <a href="iletisim.html" class="text-xl">İletişim</a>
+            <a href="https://wa.me/905051113552" target="_blank" class="text-green-400 text-lg uppercase pt-6"><i class="fab fa-whatsapp"></i> WhatsApp Destek</a>
         </nav>
     </div>
 
@@ -61,7 +107,7 @@
     <header class="pt-40 pb-16 bg-white px-6">
         <div class="max-w-7xl mx-auto text-center">
             <span class="text-[#c5a059] uppercase tracking-[0.4em] font-bold text-xs mb-4 block">Seçkin Modeller</span>
-            <h1 class="text-5xl md:text-6xl text-bursa-green mb-6">Tüm Ürünlerimiz</h1>
+            <h1 class="text-5xl md:text-6xl text-bursa-green mb-6">5D Baskılı Kırlentler</h1>
             <p class="text-gray-500 max-w-2xl mx-auto italic font-light">
                 Bursa Osmangazi'deki tesislerimizde 5D baskı teknolojisi ve premium örgü kadife ile hazırlanan özel koleksiyonumuz.
             </p>
@@ -76,7 +122,7 @@
         </div>
     </section>
 
-    <!-- Profesyonelleştirilmiş Footer (Ana Sayfa ile Aynı) -->
+    <!-- Profesyonelleştirilmiş Footer -->
     <footer class="bg-gray-950 text-gray-400 pt-20 pb-10 px-6 border-t border-white/5">
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-3 gap-12 text-center md:text-left mb-16 border-b border-white/10 pb-16">
@@ -124,7 +170,7 @@
         menuBtn.onclick = () => mobileMenu.classList.add('active');
         closeBtn.onclick = () => mobileMenu.classList.remove('active');
 
-        // Ürünleri Listeleme
+        // Ürünleri Listeleme (Orijinal Döngü)
         const urunListesi = document.getElementById('urun-listesi');
         for (let i = 1; i <= 74; i++) {
             const urunKarti = `
