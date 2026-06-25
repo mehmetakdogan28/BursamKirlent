@@ -7,11 +7,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body { font-family: 'Lato', sans-serif; scroll-behavior: smooth; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        body { font-family: 'Inter', sans-serif; }
         .text-bursa-green { color: #10402e; }
         .bg-bursa-green { background-color: #10402e; }
         .bg-krem { background-color: #fcf9f2; }
@@ -19,96 +18,80 @@
         #mobile-menu.active { transform: translateX(0); }
         .submenu { display: none; }
         .submenu.active { display: block; }
-        .urun-kart { transition: all 0.4s ease; border: 1px solid #eee; }
-        .urun-kart:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); border-color: #c5a059; }
     </style>
 </head>
 <body class="bg-gray-50">
 
-    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
+    <nav class="fixed w-full z-50 bg-white border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <button id="menu-btn" class="md:hidden text-bursa-green text-2xl"><i class="fas fa-bars"></i></button>
+            <button id="menu-btn" class="md:hidden text-black text-2xl"><i class="fas fa-bars"></i></button>
             
             <div class="flex items-center gap-3 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">
-                <img src="img/logo.png" alt="Logo" class="h-10">
-                <a href="index.html" class="text-xl font-bold text-bursa-green tracking-tight uppercase">BURSAM <span class="text-[#c5a059]">KIRLENT</span></a>
+                <a href="index.html" class="text-2xl font-black text-black tracking-tighter">WRAITH<span class="text-yellow-500">.</span></a>
             </div>
 
-            <div class="hidden md:flex items-center space-x-8 font-bold text-sm uppercase tracking-widest text-bursa-green">
-                <a href="index.html" class="hover:text-[#c5a059]">Ana Sayfa</a>
+            <div class="hidden md:flex items-center space-x-8 font-semibold text-sm uppercase tracking-wider text-black">
+                <a href="index.html" class="hover:text-yellow-600">Ana Sayfa</a>
                 <div class="relative group">
-                    <button class="hover:text-[#c5a059]">Kategoriler</button>
-                    <div class="absolute left-0 top-full w-48 bg-white shadow-xl rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all mt-2">
-                        <a href="urunler.html" class="block py-2 hover:text-[#c5a059]">5D Kırlentler</a>
-                        <a href="punch.html" class="block py-2 hover:text-[#c5a059]">Punch Kırlent</a>
+                    <button class="hover:text-yellow-600 flex items-center gap-1">Kategoriler <i class="fas fa-chevron-down text-[10px]"></i></button>
+                    <div class="absolute left-[-400px] top-full w-[900px] bg-white shadow-2xl p-8 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all grid grid-cols-4 gap-8">
+                        <div><h4 class="font-bold mb-4">Mouse</h4><a href="#" class="block text-gray-500 hover:text-black py-1">Tüm Mouselar</a></div>
+                        <div><h4 class="font-bold mb-4">Klavye</h4><a href="#" class="block text-gray-500 hover:text-black py-1">Tüm Klavyeler</a></div>
+                        <div><h4 class="font-bold mb-4">Mousepad</h4><a href="#" class="block text-gray-500 hover:text-black py-1">Tüm Mousepadler</a></div>
+                        <div><h4 class="font-bold mb-4">Kulaklık ve Ses</h4><a href="#" class="block text-gray-500 hover:text-black py-1">IEM Kulaklıklar</a></div>
                     </div>
                 </div>
-                <a href="iletisim.html" class="hover:text-[#c5a059]">İletişim</a>
+                <a href="#" class="hover:text-yellow-600">Markalar</a>
+                <a href="#" class="hover:text-yellow-600">Studio</a>
+                <a href="iletisim.html" class="hover:text-yellow-600">İletişim</a>
             </div>
-            <div class="w-8 md:hidden"></div>
+            <div class="w-8"></div>
         </div>
     </nav>
 
-    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white text-bursa-green md:hidden p-6">
-        <div class="flex justify-between items-center mb-10">
-            <span class="text-xl font-bold">MENÜ</span>
-            <button id="close-btn" class="text-3xl"><i class="fas fa-times"></i></button>
-        </div>
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white p-6 md:hidden">
+        <div class="flex justify-between items-center mb-10"><button id="close-btn" class="text-3xl"><i class="fas fa-times"></i></button></div>
         <div class="flex flex-col space-y-6 text-xl font-bold uppercase">
             <a href="index.html">Ana Sayfa</a>
-            
-            <div id="cat-toggle" class="flex justify-between items-center cursor-pointer">
-                <span>Kategoriler</span>
-                <i class="fas fa-chevron-right text-sm"></i>
-            </div>
+            <div id="cat-toggle" class="flex justify-between items-center cursor-pointer"><span>Kategoriler</span><i class="fas fa-chevron-right text-sm"></i></div>
             <div id="submenu" class="submenu pl-6 space-y-4 text-base font-normal text-gray-600">
-                <a href="urunler.html" class="block py-1">5D Kırlentler</a>
-                <a href="punch.html" class="block py-1">Punch Kırlent</a>
+                <a href="urunler.html" class="block">5D Kırlentler</a>
+                <a href="punch.html" class="block">Punch Kırlent</a>
             </div>
-
             <a href="iletisim.html">İletişim</a>
         </div>
     </div>
 
-    <header class="pt-40 pb-16 bg-white px-6">
-        <div class="max-w-7xl mx-auto text-center">
-            <span class="text-[#c5a059] uppercase tracking-[0.4em] font-bold text-xs mb-4 block">Seçkin Modeller</span>
-            <h1 class="text-5xl md:text-6xl text-bursa-green mb-6">5D Baskılı Kırlentler</h1>
-            <div class="w-24 h-1 bg-[#c5a059] mx-auto mt-8"></div>
-        </div>
-    </header>
+    <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold mb-10">5D Baskılı Kırlentler</h2>
+        <div id="urun-listesi" class="grid grid-cols-2 md:grid-cols-4 gap-6"></div>
+    </main>
 
-    <section class="py-12 px-6">
-        <div id="urun-listesi" class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-10"></div>
-    </section>
-
-    <footer class="bg-gray-950 text-gray-400 pt-20 pb-10 px-6 border-t border-white/5">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-3 gap-12 text-center md:text-left mb-16 border-b border-white/10 pb-16">
-                <div>
-                    <h3 class="text-white text-2xl font-bold uppercase tracking-widest mb-4">BURSAM <span class="text-[#c5a059]">KIRLENT</span></h3>
-                    <p class="text-sm leading-relaxed">Bursa'nın tekstil tecrübesini 5D baskı teknolojisiyle birleştirerek evlerinize şıklık ve konfor taşıyoruz.</p>
-                </div>
-                <div class="flex flex-col gap-4">
-                    <h4 class="text-white font-bold uppercase text-xs tracking-widest mb-2 text-[#c5a059]">İletişim Kanalları</h4>
-                    <a href="https://wa.me/905051113552" class="flex items-center justify-center md:justify-start gap-3 hover:text-white transition">
-                        <i class="fab fa-whatsapp text-green-500 text-xl"></i>
-                        <span class="text-sm text-white font-bold">+90 505 111 35 52</span>
-                    </a>
-                </div>
-                <div class="flex flex-col gap-4">
-                    <h4 class="text-white font-bold uppercase text-xs tracking-widest mb-2 text-[#c5a059]">Merkez Ofis</h4>
-                    <div class="flex items-start justify-center md:justify-start gap-3">
-                        <i class="fas fa-map-marker-alt text-red-600 mt-1"></i>
-                        <span class="text-sm text-white">Osmangazi / Bursa</span>
-                    </div>
+    <footer class="bg-[#0a0a0a] text-white pt-20 pb-10 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 mb-16">
+            <div>
+                <h3 class="text-lg font-bold mb-4">BURSAM KIRLENT</h3>
+                <p class="text-gray-400 text-sm">Bursa'nın tekstil tecrübesini 5D baskı teknolojisiyle birleştirerek evlerinize şıklık ve konfor taşıyoruz.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-xs uppercase tracking-widest mb-4">İletişim Kanalları</h4>
+                <div class="flex flex-col gap-2 text-gray-400 text-sm">
+                    <p><i class="fab fa-whatsapp mr-2"></i> +90 505 111 35 52</p>
+                    <p><i class="fas fa-envelope mr-2"></i> mehmetakdogan152533@gmail.com</p>
                 </div>
             </div>
-            <div class="text-center text-[10px] uppercase tracking-[0.4em] font-bold opacity-30">© 2026 Bursam Kırlent | 5D Tekstil Teknolojileri</div>
+            <div>
+                <h4 class="font-bold text-xs uppercase tracking-widest mb-4">Merkez Ofis</h4>
+                <p class="text-gray-400 text-sm flex items-start"><i class="fas fa-map-marker-alt mr-2 mt-1 text-red-500"></i> Osmangazi / Bursa</p>
+            </div>
+        </div>
+        <div class="text-center text-[10px] text-gray-600 border-t border-white/10 pt-10">
+            © 2026 BURSAM KIRLENT | 5D TEKSTİL TEKNOLOJİLERİ
         </div>
     </footer>
 
     <script>
+        // Mobil Menü
         const menuBtn = document.getElementById('menu-btn');
         const closeBtn = document.getElementById('close-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -119,22 +102,17 @@
         closeBtn.onclick = () => mobileMenu.classList.remove('active');
         catToggle.onclick = () => submenu.classList.toggle('active');
 
+        // Ürün Listeleme
         const urunListesi = document.getElementById('urun-listesi');
         for (let i = 1; i <= 74; i++) {
-            const urunKarti = `
-                <div class="urun-kart group bg-white rounded-[2.5rem] overflow-hidden flex flex-col">
-                    <div class="aspect-square bg-[#000] flex items-center justify-center p-3 overflow-hidden relative">
-                        <img src="img/${i}.jpeg" alt="Model ${i}" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700" loading="lazy" onerror="this.parentElement.parentElement.style.display='none'">
+            urunListesi.innerHTML += `
+                <div class="group border border-gray-100 p-4 rounded-xl hover:shadow-lg transition">
+                    <div class="aspect-square bg-gray-100 mb-4 rounded-lg overflow-hidden">
+                        <img src="img/${i}.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition" onerror="this.parentElement.parentElement.style.display='none'">
                     </div>
-                    <div class="p-8 text-center bg-krem flex-grow border-t border-gray-50">
-                        <h3 class="text-gray-900 font-bold text-xl mb-4">MODEL - ${i}</h3>
-                        <a href="https://wa.me/905051113552" class="inline-block bg-bursa-green text-white text-[10px] font-bold px-6 py-3 rounded-full hover:bg-[#c5a059] transition-colors uppercase tracking-widest shadow-md">
-                            Sipariş Ver <i class="fab fa-whatsapp ml-2"></i>
-                        </a>
-                    </div>
+                    <h3 class="font-bold text-sm">MODEL - ${i}</h3>
                 </div>
             `;
-            urunListesi.innerHTML += urunKarti;
         }
     </script>
 </body>
